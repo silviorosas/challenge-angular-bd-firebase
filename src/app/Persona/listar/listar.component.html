@@ -1,0 +1,40 @@
+<header class="container-fluid bg-primary d-flex justify-content-center">
+    <p class="text-light mb-0 p-2 fs-6">Challenge Greydive - Desarrollado por Silvio Rosas con Angular + BD Firebase</p>
+</header>
+
+<div class="container">   
+          
+    <button class="btn btn-primary mt-2 mb-2 " routerLink="/">Home</button>       
+   
+    <!--Tabla-->
+    <div id="pdf" class="card">
+       
+        <div class="card-header" >
+            <h3>Lista de Registrados</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                       
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>País</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items"  class="text-center">
+                       
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.email}}</td>
+                        <td> {{item.fecha | date}} </td>
+                        <td>{{item.pais}}</td>
+                      
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
