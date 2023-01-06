@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ServiceService } from 'src/app/Service/service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-listar',
@@ -24,6 +25,10 @@ export class ListarComponent implements OnInit {
       this.items=data;
       console.log(this.items)
     })
+  }
+
+ async deleteItem(item:any){
+  const res = await this.service.deleteItem(item);   
   }
 
   
