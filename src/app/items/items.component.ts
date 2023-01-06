@@ -42,7 +42,7 @@ export class ItemComponent implements OnInit {
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: 'Enviado con Éxito!!',          
+      title: 'Guardado con Éxito!!',          
     })  
     console.log("res",res);
     if (this.formFilter.valid) {      
